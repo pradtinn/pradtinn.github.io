@@ -1,0 +1,27 @@
+.navbar-default {
+    background-color: #ff3e31;
+    border-radius: 0
+}
+
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #ffffff !IMPORTANT
+}
+
+.nav.navbar-nav>li>a {
+    color: #ffffff
+}
+
+.nav.navbar-nav>li>a:hover,
+.nav.navbar-nav>li>a:focus {
+    background-color: #ff474e;
+    color: #000000
+}
+
+.nav.navbar-nav>.active>a,
+.nav.navbar-nav>.active>a:hover,
+.nav.navbar-nav>.active>a:focus {
+    color: #000000;
+    background-color: #ff474e
+}
