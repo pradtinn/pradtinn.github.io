@@ -1,32 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
     <head>
-          <title>Praductions</title>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link rel="stylesheet" href="css/bootstrap.css">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-          <script src="js/bootstrap.min.js"></script>
+        <title>Praductions</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <style>
-        h1 {
-            font-size: 100px;
-        }
-        .bg-black {
-            background-color: #000000
-        }
-    </style>
     <body>
-        <div style="background-color:#000000"> 
-            <jumbotron>
-                <h1 align="center" style="margin: 0px; color: #FFFFFF">Prad's Website</h1>
-            </jumbotron>
+
+        <div>
+            <div id="sidebar" class="inactive">
+                <i id="dismiss" class="fa fa-chevron-left"></i>
+                <a id="sidebar-item" style="margin-top:13%">Home</a>
+                <a id="sidebar-item">About</a>
+            </div>
+            <div id="content" class="full">
+                <nav class="navbar navbar-custom navbar-expand-sm">
+                    <ul class="navbar-nav">
+                        <li><i id="sidebarExpand" class="fa fa-navicon"></i></li>
+                        <li><i class="fa fa-home"></i></li>
+                    </ul>
+                </nav>
+                <div style="height:100vh"></div>
+                <div style="height:100vh; background-color:rgba(0,0,70,0.5)"></div>
+                <div style="height:100vh; background-color:rgba(0,0,70,1)"></div>
+            </div>
+            <div class="overlay"></div>
         </div>
-        <nav class="navbar navbar-dark sticky-top navbar-fixed-bottom bg-black" style="margin: 0px; border-radius: 0px">
-            <a class="navbar-brand" style="color:#FFFFFF" href="#">
-                <img src="assets/prad_productions.svg" width="50" height="50">
-                Praductions
-            </a>
-        </nav>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#sidebarExpand').on('click', function() {
+                    $('#sidebar').removeClass('inactive');
+                    $('.overlay').fadeIn();
+                });
+                $('#dismiss').on('click', function() {
+                    $('#sidebar').addClass('inactive');
+                    $('.overlay').fadeOut();
+                });
+            });
+        </script>
+        
     </body>
 </html>
