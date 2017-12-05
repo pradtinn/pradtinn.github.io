@@ -1,6 +1,10 @@
 ::-webkit-scrollbar {
     display:none;
 }
+::selection {
+    background-color:#002b70;
+    color:white;
+}
 .navbar-custom {
     position:fixed;
     padding:0px;
