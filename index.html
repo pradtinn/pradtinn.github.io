@@ -2,15 +2,17 @@
 
 <html>
     <head>
-        <title>Praductions</title>
+        <title>Prad's Website</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/custom.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,600">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Molle:400i">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+    <style>
+    </style>
     <body>
 
         <div>
@@ -23,12 +25,20 @@
                 <nav class="navbar navbar-custom navbar-expand-sm">
                     <ul class="navbar-nav">
                         <li><i id="sidebarExpand" class="fa fa-navicon"></i></li>
-                        <li><i class="fa fa-home"></i></li>
+                        <li><i id="homeScroll" class="fa fa-home"></i></li>
                     </ul>
                 </nav>
-                <div style="height:100vh"></div>
-                <div style="height:100vh; background-color:rgba(0,0,70,0.5)"></div>
-                <div style="height:100vh; background-color:rgba(0,0,70,1)"></div>
+                <div style="height:100vh; font-family:'Molle',cursive">
+                    <h1 class="super-header" style="color:black; padding:20vw 0; background:linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.7)); -webkit-background-clip:text; -webkit-text-fill-color:transparent">Prad's Website</h1>
+                </div>
+                <div style="height:50vh; background-color:rgba(0,0,0,0.5)">
+                </div>
+                <div id="home" style="height:100vh; background-color:rgba(0,0,0,1)">
+                    <h1 class="super-header glow" style="color:white;">Welcome<a id="pulse">_</a></h1>
+                    <div class="container">
+                        <p>There are over 1 billion websites on the Internet. My goal is to make this one memorable with a clean, elegant UI.</p>
+                    </div>
+                </div>
             </div>
             <div class="overlay"></div>
         </div>
@@ -41,11 +51,20 @@
                     $('#sidebar').removeClass('inactive');
                     $('.overlay').fadeIn();
                 });
+                $('#homeScroll').on('click', function() {
+                    $('html,body').animate({
+                        scrollTop: $('#home').offset().top
+                    },600);
+                })
                 $('#dismiss').on('click', function() {
                     $('#sidebar').addClass('inactive');
                     $('.overlay').fadeOut();
                 });
             });
+            function pulsate(element) {
+                $(element || this).fadeOut(2000).fadeIn(2000, pulsate);
+            }
+            pulsate($('#pulse'));
         </script>
         
     </body>
