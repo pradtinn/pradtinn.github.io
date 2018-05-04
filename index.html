@@ -7,71 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/custom.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,600">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Molle:400i">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <style>
     </style>
-    <body>
-
-        <div>
-            <div id="sidebar" class="inactive">
-                <i id="dismiss" class="fa fa-chevron-left"></i>
-                <a id="sidebar-item" style="margin-top:13%">Home</a>
-                <a id="sidebar-item">About</a>
-            </div>
-            <div id="content" class="full">
-                <nav class="navbar navbar-custom navbar-expand-sm">
-                    <ul class="navbar-nav">
-                        <li><i id="sidebarExpand" class="fa fa-navicon"></i></li>
-                        <li><i id="homeScroll" class="fa fa-home"></i></li>
-                        <li><i id="aboutScroll" class="fa fa-info-circle"></i></li>
-                    </ul>
-                </nav>
-                <div id="home" style="height:100vh; font-family:'Molle',cursive">
-                    <h1 class="super-header" style="color:white; padding:20vw 0; background:linear-gradient(rgb(255, 255, 255),rgba(255, 255, 255, 0.3)); -webkit-background-clip:text; -webkit-text-fill-color:transparent">Prad's Website</h1>
-                </div>
-                <div style="height:50vh; background-color:rgba(0, 0, 0, 0.5)">
-                </div>
-                <div id="about" style="height:100vh; background-color:rgba(0,0,0,1)">
-                    <h1 class="super-header glow" style="color:white;">Welcome<a id="pulse">_</a></h1>
-                    <div class="container">
-                        <p>There are over 1 billion websites on the Internet. My goal is to make this one memorable with a clean, elegant UI.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="overlay"></div>
-        </div>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('#sidebarExpand').on('click', function() {
-                    $('#sidebar').removeClass('inactive');
-                    $('.overlay').fadeIn();
-                });
-                $('#homeScroll').on('click', function() {
-                    $('html,body').animate({
-                        scrollTop: $('#home').offset().top
-                    },600);
-                });
-                $('#aboutScroll').on('click', function() {
-                    $('html,body').animate({
-                        scrollTop: $('#about').offset().top
-                    },600);
-                })
-                $('#dismiss').on('click', function() {
-                    $('#sidebar').addClass('inactive');
-                    $('.overlay').fadeOut();
-                });
-            });
-            function pulsate(element) {
-                $(element || this).fadeOut(2000).fadeIn(2000, pulsate);
-            }
-            pulsate($('#pulse'));
-        </script>
-        
+    <body> 
     </body>
 </html>
